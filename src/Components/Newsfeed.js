@@ -16,8 +16,8 @@ const NewsFeed = () => {
 
     useEffect(() => {
         axios.get("https://www.spaceflightnewsapi.net/api/v2/articles")
-        // Call the delay function
-        // .then(delay(3000))
+        // Call the delay function (takes milliseconds)
+        // .then(delay(5000))
         .then(res => {
             setNews(res.data);
         })
@@ -26,7 +26,9 @@ const NewsFeed = () => {
 
     return(
         <div>
+            <div className = "circular-progress">
             {news.length === 0 ? <CircularProgress /> : null}
+            </div>
         <div className = "news">
         <div className = "newsfeed">
             {news.map(article => (
