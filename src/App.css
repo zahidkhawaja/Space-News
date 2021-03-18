@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
+
 .App {
   text-align: center;
 }
@@ -8,7 +10,7 @@
 }
 
 .App-header {
-  background-color: #0ea0cc;
+  background-color: #079ac7;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +18,7 @@
   justify-content: center;
   font-size: calc(5px + 2vmin);
   color: white;
+  font-family: 'Blinker', sans-serif;
 }
 
 .news {
@@ -56,5 +59,8 @@
 @media (max-width: 600px) {
   .newsfeed {
     width: 100%;
+  }
+  .App-header {
+    font-size: calc(5px + 2.5vmin);
   }
 }
