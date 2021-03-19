@@ -32,10 +32,12 @@ const NewsFeed = () => {
         <div className = "news">
         <div className = "newsfeed">
             {news.map(article => (
+                <a href={article.url} target="_blank">
                 <div id = {article.id} className = "article">
                     <h3>{article.title}</h3>
                     <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do YYYY")}</p>
                     </div>
+                    </a>
             ))}
         </div>
         </div>
