@@ -19,6 +19,7 @@
   font-size: calc(5px + 2vmin);
   color: white;
   font-family: 'Blinker', sans-serif;
+  box-shadow: 0 2px 6px 1px rgba(80, 78, 80, 1.8);
 }
 
 .news {
