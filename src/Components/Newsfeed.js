@@ -34,6 +34,7 @@ const NewsFeed = () => {
                 <div id = {article.id} className = "article">
                     <h3>{article.title}</h3>
                     <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do YYYY")}</p>
+                    <p className = "source">{article.newsSite}</p>
                     </div>
                     </a>
             ))}
