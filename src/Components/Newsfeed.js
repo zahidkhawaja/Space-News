@@ -34,7 +34,7 @@ const NewsFeed = () => {
                 <a href={article.url} target="_blank" rel="noreferrer">
                 <div id = {article.id} className = "article">
                     <h3>{article.title}</h3>
-                    <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do YYYY")}</p>
+                    <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do, YYYY")}</p>
                     <p className = "source">{article.newsSite}</p>
                     </div>
                     </a>
