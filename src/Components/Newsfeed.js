@@ -7,7 +7,7 @@ const NewsFeed = () => {
 
     const [news, setNews] = useState([]);
 
-    // THIS IS FOR TESTING THE LOADING INDICATOR FUNCTIONALITY (emulating slow fetching)
+    // Emulating slow fetching from API to test progress wheel
     // function delay(ms) {
     //     return function(x) {
     //       return new Promise(resolve => setTimeout(() => resolve(x), ms));
@@ -16,7 +16,7 @@ const NewsFeed = () => {
 
     useEffect(() => {
         axios.get("https://www.spaceflightnewsapi.net/api/v2/articles")
-        // .then(delay(1000))
+        // .then(delay(5000))
         .then(res => {
             setNews(res.data);
         })
