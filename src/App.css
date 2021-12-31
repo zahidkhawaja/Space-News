@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  background: snow;
 }
 
 .App-logo {
@@ -10,7 +11,9 @@
 }
 
 .App-header {
-  background-color: #0e6597;
+  /* background-color: #0e6597; */
+  background: rgb(152,192,193);
+  background: linear-gradient(90deg, rgba(152,192,193,1) 0%, rgba(96,45,124,1) 24%, rgba(163,113,151,1) 70%, rgba(111,109,196,1) 100%);
   max-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -37,6 +40,7 @@
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: white;
 
 }
 

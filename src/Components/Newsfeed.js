@@ -7,7 +7,7 @@ const NewsFeed = () => {
 
     const [news, setNews] = useState([]);
 
-    // Emulating slow fetching from API to test progress wheel
+    // Uncomment this to emulate slow fetching from API (to test progress wheel)
     // function delay(ms) {
     //     return function(x) {
     //       return new Promise(resolve => setTimeout(() => resolve(x), ms));
