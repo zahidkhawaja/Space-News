@@ -7,20 +7,29 @@ const NewsFeed = () => {
 
     const [news, setNews] = useState([]);
 
-    // Uncomment this to emulate slow fetching from API (to test progress wheel)
-    // function delay(ms) {
-    //     return function(x) {
-    //       return new Promise(resolve => setTimeout(() => resolve(x), ms));
-    //     };
-    //   }
+    const getNews = async () => {
+        try {
+            // Uncomment the following line to emulate slow fetching from API (useful for testing the progress wheel)
+            // await new Promise(resolve => setTimeout(resolve, 3000))
+            const res = await axios.get("https://api.spaceflightnewsapi.net/v3/articles");
+            setNews(res.data);
+        } catch (err) {
+            console.log("Error fetching data")
+        }
+    };
 
     useEffect(() => {
-        axios.get("https://api.spaceflightnewsapi.net/v3/articles")
-        // .then(delay(5000))
-        .then(res => {
-            setNews(res.data);
-        })
-        .catch(err => console.log("Error fetching data"))
+
+        getNews();
+
+        // Old implementation of axios without async/await (just keeping this for reference)
+        // axios.get("https://api.spaceflightnewsapi.net/v3/articles")
+        // // .then(delay(5000))
+        // .then(res => {
+        //     setNews(res.data);
+        // })
+        // .catch(err => console.log("Error fetching data"))
+        
     }, [])
 
     return(
