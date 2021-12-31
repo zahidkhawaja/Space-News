@@ -15,7 +15,7 @@ const NewsFeed = () => {
     //   }
 
     useEffect(() => {
-        axios.get("https://www.spaceflightnewsapi.net/api/v2/articles")
+        axios.get("https://api.spaceflightnewsapi.net/v3/articles")
         // .then(delay(5000))
         .then(res => {
             setNews(res.data);
