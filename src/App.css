@@ -13,7 +13,7 @@
 .App-header {
   /* background-color: #0e6597; */
   background: rgb(152,192,193);
-  background: linear-gradient(90deg, rgba(152,192,193,1) 0%, rgba(96,45,124,1) 24%, rgba(163,113,151,1) 70%, rgba(111,109,196,1) 100%);
+  background: linear-gradient(90deg, rgba(152,192,193,1) -5%, rgba(96,45,124,1) 24%, rgba(163,113,151,1) 70%, rgba(111,109,196,1) 100%);
   max-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,7 @@ a {
   }
   .App-header {
     font-size: calc(5px + 3vmin);
+    background: linear-gradient(90deg, rgba(152,192,193,1) -10%, rgba(96,45,124,1) 24%, rgba(163,113,151,1) 70%, rgba(111,109,196,1) 100%);
   }
 
   .news {
