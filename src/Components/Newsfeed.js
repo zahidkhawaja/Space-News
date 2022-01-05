@@ -9,8 +9,7 @@ const NewsFeed = () => {
 
     const getNews = async () => {
         try {
-            // Uncomment the following line to emulate slow fetching from API (useful for testing the progress wheel)
-            // await new Promise(resolve => setTimeout(resolve, 3000))
+            await new Promise(resolve => setTimeout(resolve, 1000))
             const res = await axios.get("https://api.spaceflightnewsapi.net/v3/articles");
             setNews(res.data);
         } catch (err) {
@@ -18,19 +17,7 @@ const NewsFeed = () => {
         }
     };
 
-    useEffect(() => {
-
-        getNews();
-
-        // Old implementation of axios without async/await (just keeping this for reference)
-        // axios.get("https://api.spaceflightnewsapi.net/v3/articles")
-        // // .then(delay(5000))
-        // .then(res => {
-        //     setNews(res.data);
-        // })
-        // .catch(err => console.log("Error fetching data"))
-        
-    }, [])
+    useEffect(() => getNews(), []);
 
     return(
         <div>

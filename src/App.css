@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
 
+html {
+  background-color: snow;
+}
+
 .App {
   text-align: center;
   background: snow;
