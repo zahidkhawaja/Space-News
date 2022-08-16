@@ -140,3 +140,10 @@ a {
     height: 175px;
   }
 }
+
+@media (max-width: 850px) {
+  .newsfeed {
+    width: 92.5%;
+  }
+}
+
