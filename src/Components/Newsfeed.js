@@ -29,9 +29,14 @@ const NewsFeed = () => {
             {news.map(article => (
                 <a id = {article.id} key = {article.id} href={article.url} target="_blank" rel="noreferrer">
                 <div className = "article">
+                    <div className = "article-text">
                     <h3>{article.title}</h3>
-                    <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do, YYYY")}</p>
                     <p className = "source">{article.newsSite}</p>
+                    <p className = "timestamp">{moment(article.publishedAt).format("dddd, MMMM Do, YYYY")}</p>
+                    </div>
+                    <div className = "article-image">
+                        <img className = "image" src = {article.imageUrl} alt = "article preview" />
+                        </div>
                     </div>
                     </a>
             ))}

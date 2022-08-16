@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap');
 
 html {
-  background-color: snow;
+  background-color: #F6F8FC;
 }
 
 .App {
   text-align: center;
-  background: snow;
+  background: #F6F8FC;
 }
 
 .App-logo {
@@ -16,6 +16,7 @@ html {
 
 .App-header {
   background: linear-gradient(45deg, #E73C7E, #23A6D5);
+  box-shadow: 0 2px 6px 1px rgba(80, 78, 80, 1.8);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
   height: 100vh;
@@ -27,7 +28,6 @@ html {
   font-size: calc(5px + 2vmin);
   color: white;
   font-family: 'Blinker', sans-serif;
-  box-shadow: 0 2px 6px 1px rgba(80, 78, 80, 1.8);
 }
 
 @keyframes gradient {
@@ -54,15 +54,17 @@ html {
 
 .article {
   margin: 15px;
-  padding: 10px;
+  padding: 30px;
+  border-bottom: 1px solid lightgray;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   background: white;
-
+  display: flex;
+  align-items: center;
 }
 
 .article:hover {
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(252, 252, 252);
 }
 
 .App-link {
@@ -72,12 +74,12 @@ html {
 .timestamp {
   color: gray;
   font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .source {
   font-size: 0.75rem;
   color: gray;
-  font-style: italic;
 }
 
 .circular-progress {
@@ -87,6 +89,26 @@ html {
 a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.815);
+}
+
+.image {
+  border-radius: 10px;
+  width: 70%;
+  height: 150px;
+  object-fit: cover;
+  float: right;
+}
+
+.article-text {
+  width: 70%;
+}
+
+.article-image {
+  width: 30%;
+}
+
+.article-image {
+  width: 50%;
 }
 
 @media (max-width: 600px) {
@@ -105,5 +127,16 @@ a {
     margin: 0px;
     margin-top: 12.5px;
     margin-bottom: 15px;
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
+
+  .article-text, .article-image {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 175px;
   }
 }
